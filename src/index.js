@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { App } from "./project01/App";
+import { App } from "./project03_quote_generator/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
