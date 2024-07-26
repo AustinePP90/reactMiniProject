@@ -12,6 +12,8 @@ const images = [
 export const App = () => {
   // map함수에서 사용할 이미지 index값 설정
   const [current, setCurrent] = useState(0);
+  // useEffect 두번째 인자 연구 sample 코드 -------------
+  // const [sample, setSample] = useState(0);
 
   // length속성(배열의 index 시작 값은 0, 그러므로 length - 1)을 써서 이미지 갯수에 제한X
   const prevSlide = () => {
@@ -24,7 +26,7 @@ export const App = () => {
     setCurrent(current === images.length - 1 ? 0 : current + 1);
   };
 
-  // prevSlide, nextSlide 참고용--------------------------------------
+  // prevSlide, nextSlide 참고용 ----------------------------------
   // const handleArrowClick = (direction) => {
   //   let _index = currentIndex + direction;
   //   if (_index < 0) {
@@ -35,12 +37,18 @@ export const App = () => {
   //   setCurrentIndex(_index);
   // };
 
+  // 학습이 더 필요함! 리액트에서 setInterval함수 사용, 두번째 인자에 무엇을 넣을까?, useEffect에서 setInterval함수 작동원리 이해 안 됨...
   useEffect(() => {
     const interval = setInterval(() => {
+      // useState값이 3이 넘어가면 안 됨, 이미지의 index값을 넘어감(현재 이미지 갯수는 4개)
+      // useState값이 4가 되면, 4 % 4(images.length) = 0(current), 다시 0으로 만듬
       setCurrent((current) => (current + 1) % images.length);
     }, 3000);
-    // 컴포넌트가 unmount하면 setInterval 중단
-    return () => clearInterval(interval);
+    console.log("인터벌 set");
+    return () => {
+      clearInterval(interval);
+      console.log("인터벌 clear");
+    };
   }, [images.length]);
 
   return (
@@ -63,6 +71,9 @@ export const App = () => {
               </div>
             )
         )}
+        {/* useEffect 두번째 인자 연구 sample 코드 --------------------- */}
+        {/* <p>{sample}</p>
+        <button onClick={() => setSample(sample + 1)}>sample</button> */}
       </div>
     </div>
   );
