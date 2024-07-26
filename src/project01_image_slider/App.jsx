@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./main.css";
 
 // 이미지 src 배열로 받기
@@ -23,6 +23,25 @@ export const App = () => {
   const nextSlide = () => {
     setCurrent(current === images.length - 1 ? 0 : current + 1);
   };
+
+  // prevSlide, nextSlide 참고용--------------------------------------
+  // const handleArrowClick = (direction) => {
+  //   let _index = currentIndex + direction;
+  //   if (_index < 0) {
+  //     _index = 0;
+  //   } else if (_index > sliders.length - 1) {
+  //     _index = sliders.length - 1;
+  //   }
+  //   setCurrentIndex(_index);
+  // };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((current) => (current + 1) % images.length);
+    }, 3000);
+    // 컴포넌트가 unmount하면 setInterval 중단
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <div>
