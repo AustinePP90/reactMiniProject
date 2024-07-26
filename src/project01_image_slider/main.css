@@ -1,0 +1,60 @@
+* {
+  height: 100%;
+  background-color: #eee;
+}
+
+div {
+  height: 30rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  width: 62.5rem;
+  margin: 1.5rem auto;
+  height: 3rem;
+  color: #555;
+}
+
+.slider_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 62.5rem;
+  height: 25rem;
+  margin: 0 auto;
+}
+
+.slider {
+  margin: 0;
+  width: 37.5rem;
+  height: 25rem;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.left_btn,
+.right_btn {
+  position: absolute;
+  font-size: 3rem;
+  height: 4rem;
+  color: #555;
+  cursor: pointer;
+  margin: 0;
+}
+
+.left_btn {
+  left: 100px;
+}
+
+.right_btn {
+  right: 100px;
+}
