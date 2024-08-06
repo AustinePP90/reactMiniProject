@@ -1,4 +1,4 @@
-import { Question } from "./Question";
+import { Question } from "./Sample2";
 import "./styles.css";
 
 export function App() {

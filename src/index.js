@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { App } from "./project01_image_slider/App";
+import { App } from "./project02_accordian/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -1,15 +1,16 @@
 import { useState } from "react";
 
-export function Question({ question }) {
-  const [isOpen, setOpen] = useState(false);
-
+export const Question = ({ question }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <section>
-      <div className={isOpen ? "open" : "closed"}>
+      <div>
         <h4>{question.title}</h4>
-        <button onClick={() => setOpen(!isOpen)}>{isOpen ? "-" : "+"}</button>
+        <button onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? "close" : "open"}
+        </button>
       </div>
       {isOpen && <p>{question.info}</p>}
     </section>
   );
-}
+};
