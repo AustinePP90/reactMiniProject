@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #555;
+}
+
+.container {
+  width: 850px;
+  margin: 0 auto;
+  padding: 15px 0;
+  text-align: center;
+  background-color: #1d4088;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 35px;
+}
+
+section div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 650px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+section div.closed {
+  margin-bottom: 25px;
+}
+
+section h4 {
+  margin: 0 30px 0 0;
+  color: #555;
+}
+
+section button {
+  width: 50px;
+  height: 30px;
+  border: 0;
+  border-radius: 5px;
+  padding: 0;
+  color: #fff;
+  background-color: #1d4088;
+}
+
+section p {
+  width: 650px;
+  margin: 0 auto 25px auto;
+  padding: 5px 10px 15px 10px;
+  background-color: #fff;
+  color: #555;
+  border-radius: 10px;
+}

@@ -4,7 +4,7 @@ export const Question = ({ question }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <section>
-      <div>
+      <div className={isOpen ? "open" : "closed"}>
         <h4>{question.title}</h4>
         <button onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? "close" : "open"}
