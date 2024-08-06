@@ -1,6 +1,7 @@
 import { Question } from "./Question";
 import "./main.css";
 
+// 배열로 질문 데이터 저장함
 const questions = [
   {
     id: 1,
@@ -26,8 +27,9 @@ export const App = () => {
       <div className="container">
         <h2>Frequently Asked Questions</h2>
         <div className="questions">
+          {/* map()함수로 각각의 배열 데이터(questions)에 접근 */}
           {questions.map((question) => (
-            <Question key={question.key} question={question} />
+            <Question key={question.id} question={question} /> // Question 컴포넌트에 props(key, question) 전달
           ))}
         </div>
       </div>
